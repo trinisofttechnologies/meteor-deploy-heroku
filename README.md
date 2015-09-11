@@ -5,12 +5,13 @@ Deploy your meteor app on heroku without addons or plugins
 
 Hi, If you are looking to deploy your meteor app on heroku, and you are facing dificulty with the addons, here's a script that will help you deploy your meteor app on heroku wihtout any effort.
 
-# pre requiest
+# Prerequisite
 
 1. You need to have meteor, git and heroku installed
-2. You should be logged in with heroku
+2. You should be logged in with heroku (heroku login)
 3. Make sure you have heroku app, and you know the app name
-
+4. Make sure you are able to push to heroku repo (git push https://git.heroku.com/appName.git)
+5. Assuming that you have already added your heroku key (heroku keys:add)
 
 # Getting started
 

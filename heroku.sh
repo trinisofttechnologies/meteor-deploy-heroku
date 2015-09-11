@@ -7,6 +7,7 @@ MAIL_URL=''
 
 ##### PUT HASH IF YOU DON"T WANT SOME ENV VAR #######
 runSript="
+\n
 cd ./programs/server \n
 npm install \n
 npm uninstall fibers \n
@@ -44,6 +45,16 @@ packageText='{
 }'
 
 echo $packageText > ./package.json
+
+appText='{
+  "name": "Trinisoft Technologies Pvt. Ltd.",
+  "description": "Trinisoft Technologies Pvt. Ltd. Official app.",
+  "repository": "https://git.heroku.com/"'$HEROKU_APP',
+  "keywords": ["node", "express", "trinisoft"],
+  "image": "heroku/nodejs"
+}'
+
+echo $appText > ./app.json
 
 git init
 git remote add heroku https://git.heroku.com/$HEROKU_APP.git

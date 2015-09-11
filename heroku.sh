@@ -1,30 +1,21 @@
 ##### DEPLOY VARIABLES #######
 HEROKU_APP='shooterapp'
 ROOT_URL='http://'$HEROKU_APP'.heroku.com/'
-MONGO_URL='mongodb://leoquip.com:123456@paulo.mongohq.com:10017/youtap
-
-'
-MONGO_OPLOG_URL='mongodb://leoquip.com:123456@paulo.mongohq.com:10017/youtap
-
-'
+MONGO_URL='mongodb://leoquip.com:123456@paulo.mongohq.com:10017/youtap'
+MONGO_OPLOG_URL='mongodb://leoquip.com:123456@paulo.mongohq.com:10017/youtap'
 MAIL_URL=''
+nodeVersion="0.10.36" ## not all node version works with some meteor version
 
 ##### PUT HASH IF YOU DON"T WANT SOME ENV VAR #######
-runSript="
-\n
-cd ./programs/server \n
-npm install \n
-npm uninstall fibers \n
-npm install fibers \n
-cd ../../ \n
-export MONGO_URL='"$MONGO_URL"' \n
-export ROOT_URL='"$ROOT_URL"' \n
-#export MONGO_OPLOG_URL='"$MONGO_OPLOG_URL"' \n
-export MAIL_URL='"$MAIL_URL"' \n
-node main.js \n
-"
+runSript="cd ./programs/server &&
+npm install &&
+cd ../../ &&
+export MONGO_URL='"$MONGO_URL"' &&
+export ROOT_URL='"$ROOT_URL"' &&
+export MAIL_URL='"$MAIL_URL"' &&
+node ./main.js"
 
-##### DON't LOOK HERE IT'S ALL MY DOING #######
+##### DON'T LOOK HERE IT'S ALL MY DOING #######
 rm -rf ./.meteor/local/heroku
 meteor build ./.meteor/local/heroku --server $ROOT_URL
 dirName=${PWD##*/}
@@ -35,7 +26,7 @@ cd bundle
 
 
 
-echo -e $runSript > ./run.sh
+echo $runSript > ./run.sh
 
 packageText='{
   "name": "'$HEROKU_APP'",
@@ -45,6 +36,9 @@ packageText='{
     "start": "sh ./run.sh"
   },
   "dependencies": {
+  },
+  "engines": {
+    "node": "'$nodeVersion'"
   }
 }'
 

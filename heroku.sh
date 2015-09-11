@@ -30,7 +30,7 @@ cd bundle
 
 
 
-echo $runSript > ./run.sh
+echo -e $runSript > ./run.sh
 
 packageText='{
   "name": "'$HEROKU_APP'",

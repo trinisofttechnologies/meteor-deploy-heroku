@@ -30,7 +30,7 @@ cd bundle
 
 
 
-echo -e  $runSript > ./run.sh
+echo $runSript > ./run.sh
 
 packageText='{
   "name": "'$HEROKU_APP'",
@@ -43,7 +43,7 @@ packageText='{
   }
 }'
 
-echo -e  $packageText > ./package.json
+echo $packageText > ./package.json
 
 git init
 git remote add heroku https://git.heroku.com/$HEROKU_APP.git

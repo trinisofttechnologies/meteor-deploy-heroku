@@ -1,8 +1,12 @@
 ##### DEPLOY VARIABLES #######
-HEROKU_APP='example'
+HEROKU_APP='shooterapp'
 ROOT_URL='http://'$HEROKU_APP'.heroku.com/'
-MONGO_URL='mongodb://username:password@paulo.mongohq.com:10017/example'
-MONGO_OPLOG_URL='mongodb://username:password@paulo.mongohq.com:10017/example'
+MONGO_URL='mongodb://leoquip.com:123456@paulo.mongohq.com:10017/youtap
+
+'
+MONGO_OPLOG_URL='mongodb://leoquip.com:123456@paulo.mongohq.com:10017/youtap
+
+'
 MAIL_URL=''
 
 ##### PUT HASH IF YOU DON"T WANT SOME ENV VAR #######

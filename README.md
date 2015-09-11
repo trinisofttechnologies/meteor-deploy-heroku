@@ -21,3 +21,9 @@ wget https://raw.githubusercontent.com/trinisofttechnologies/meteor-deploy-herok
 sh ./heroku.sh
 ## make sure you modify the variables in the script
 ```
+
+# Troubleshooting
+Please report any issues on github issues or email us directly trinisofttechnologies@gmail.com
+
+# Acknowledgements
+If you like our work, please click the start.

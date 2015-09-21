@@ -7,7 +7,7 @@ MAIL_URL=''
 METEOR_SETTINGS=$(cat ./settings.json)
 nodeVersion="0.10.36" ## not all node version works with some meteor version
 
-##### PUT HASH IF YOU DON"T WANT SOME ENV VAR #######
+##### DELETE A LINE IF YOU DON"T WANT SOME ENV VAR #######
 runSript="cd ./programs/server &&
 npm install &&
 cd ../../ &&

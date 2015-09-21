@@ -4,6 +4,7 @@ ROOT_URL='http://'$HEROKU_APP'.heroku.com/'
 MONGO_URL='mongodb://leoquip.com:123456@paulo.mongohq.com:10017/youtap'
 MONGO_OPLOG_URL='mongodb://leoquip.com:123456@paulo.mongohq.com:10017/youtap'
 MAIL_URL=''
+METEOR_SETTINGS=$(cat ./settings.json)
 nodeVersion="0.10.36" ## not all node version works with some meteor version
 
 ##### PUT HASH IF YOU DON"T WANT SOME ENV VAR #######
@@ -13,6 +14,7 @@ cd ../../ &&
 export MONGO_URL='"$MONGO_URL"' &&
 export ROOT_URL='"$ROOT_URL"' &&
 export MAIL_URL='"$MAIL_URL"' &&
+export METEOR_SETTINGS='"$METEOR_SETTINGS"' &&
 node ./main.js"
 
 ##### DON'T LOOK HERE IT'S ALL MY DOING #######
@@ -64,6 +66,5 @@ echo "Deploy complete"
 echo "Sleeping for 5s and checking log"
 sleep 5s
 heroku logs
-
 
 echo "Hurray check your app "$ROOT_URL" here"

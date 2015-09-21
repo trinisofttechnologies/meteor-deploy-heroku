@@ -60,4 +60,10 @@ git add -A
 git commit -m "init"
 git push heroku master --force
 
+echo "Deploy complete"
+echo "Sleeping for 5s and checking log"
+sleep 5s
+heroku logs
+
+
 echo "Hurray check your app "$ROOT_URL" here"

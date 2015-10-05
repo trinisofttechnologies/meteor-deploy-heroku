@@ -1,6 +1,6 @@
 ##### DEPLOY VARIABLES #######
 HEROKU_APP='shooterapp'
-ROOT_URL='https://'$HEROKU_APP'.heroku.com/'
+ROOT_URL='https://'$HEROKU_APP'.herokuapp.com/'
 MONGO_URL='mongodb://leoquip.com:123456@paulo.mongohq.com:10017/youtap'
 MONGO_OPLOG_URL='mongodb://leoquip.com:123456@paulo.mongohq.com:10017/youtap'
 MAIL_URL=''

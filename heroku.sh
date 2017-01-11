@@ -49,7 +49,7 @@ echo $packageText > ./package.json
 appText='{
   "name": "Trinisoft Technologies Pvt. Ltd.",
   "description": "Trinisoft Technologies Pvt. Ltd. Official app.",
-  "repository": "https://git.heroku.com/"'$HEROKU_APP',
+  "repository": "https://git.heroku.com/$HEROKU_APP.git",
   "keywords": ["node", "express", "trinisoft"],
   "image": "heroku/nodejs"
 }'

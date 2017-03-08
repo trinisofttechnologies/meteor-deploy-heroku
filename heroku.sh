@@ -15,6 +15,7 @@ export MONGO_URL='"$MONGO_URL"' &&
 export ROOT_URL='"$ROOT_URL"' &&
 export MAIL_URL='"$MAIL_URL"' &&
 export METEOR_SETTINGS='"$METEOR_SETTINGS"' &&
+export PORT=80 &&
 node ./main.js"
 
 ##### DON'T LOOK HERE IT'S ALL MY DOING #######
